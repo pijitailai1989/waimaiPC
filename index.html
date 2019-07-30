@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<meta name="description" content="享受地道美食，就用龙外卖，高效、快速！龙外卖汇集优质卫生的品牌商家，提供附近的本地美食、中餐、生鲜果蔬、西餐、甜品、饮料、鲜花、蛋糕、夜宵、下午茶等外卖订餐服务，应有尽有！龙外卖支持24小时外卖订餐服务，足不出户，不用排队，也可以时刻享受地道美食！">
+	<!-- <meta name="keywords" class="keywords" content="外卖,菲律宾外卖,龙外卖,外卖网,外卖网上订餐,菲律宾外卖网站,菲律宾订餐平台,马卡蒂外卖,马尼拉外卖,外卖平台,点外卖,送餐,外卖APP,点餐APP,网上点餐,中餐,餐馆,
+	Restaurant,Delivery,Discount,local food,takeout,chinese food,eats,food,restaurant delivery,loong delivery,order delivery,take away"> -->
+	<meta name="keywords" id="keywords" content="">
+	<link rel="icon" href="https://loong.ph/loong/static/favicon.ico">
+	<link rel="stylesheet" href="//at.alicdn.com/t/font_532361_9sta7yuioyshsemi.css">
+	<link rel="stylesheet" href="https://loong.ph/loong/static/plungins/photoSwipe/photoswipe.css">
+	<link rel="stylesheet" href="https://loong.ph/loong/static/plungins/photoSwipe/default-skin/default-skin.css">
+	<title></title>
+</head>
+
+<body>
+	<div id="app"></div>
+	<!-- <script type="text/script" src="https://s13.cnzz.com/z_stat.php?id=1274298828&web_id=1274298828"></script> -->
+	<script type="text/javascript" src="https://loong.ph/loong/static/plungins/qiniu.min.js"></script>
+	<script type="text/javascript" src="https://loong.ph/loong/static/plungins/plupload.full.min.js"></script>
+	<script type="text/javascript" src="https://loong.ph/loong/static/plungins/photoSwipe/photoswipe.min.js"></script>
+	<script type="text/javascript" src="https://loong.ph/loong/static/plungins/photoSwipe/photoswipe-ui-default.min.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvAsx_SoeYJ5kIUBDaMpyj92B8bvGt4Zw&libraries=places"></script>
+
+	<script>
+		console.log('Fux the productor\'s stupid designer')
+		var cnzz_s_tag = document.createElement('script')
+		cnzz_s_tag.type = 'text/javascript'
+		cnzz_s_tag.async = true
+		cnzz_s_tag.charset = 'utf-8'
+		cnzz_s_tag.src = 'https://s13.cnzz.com/z_stat.php?id=1274298828&web_id=1274298828'
+		var spt = document.getElementsByTagName('script')[0]
+		spt.parentNode.insertBefore(cnzz_s_tag, spt)
+		var _czc = _czc || []
+		// _czc.push(['_setAccount', '1274298828'])
+		// _czc.push(["_tarckEvent", "登录", "登录-首页测试"]);
+
+		let lang = getCookie('lang');
+		if (lang == 'zh') {
+			document.querySelector("title").innerHTML = "菲律宾 | 龙外卖";
+			document.querySelector("#keywords").setAttribute("content", "外卖,菲律宾外卖,龙外卖,外卖网,外卖网上订餐,菲律宾外卖网站,菲律宾订餐平台,马卡蒂外卖,马尼拉外卖,外卖平台,点外卖,送餐,外卖APP,点餐APP,网上点餐,中餐,餐馆");
+		} else if (lang == 'en') {
+			document.querySelector("title").innerHTML = "Loong Delivery";
+			document.querySelector("#keywords").setAttribute("content", "Restaurant,Delivery,Discount,local food,takeout,chinese food,eats,food,restaurant delivery,loong delivery,order delivery,take away");
+		}
+		console.log(getCookie('lang'), document.querySelector("title").innerHTML);
+
+		function getCookie(name) {
+			var arr1 = document.cookie.split("; ");
+			for (var i = 0; i < arr1.length; i++) {
+				var arr2 = arr1[i].split("=");
+				if (arr2[0] == name) {
+					return arr2[1];
+				}
+			}
+			return "";
+
+			// let btn = document.getElementsByClassName('btn_test')[0]
+		}
+		let body = document.getElementsByTagName('body')[0]
+		body.addEventListener('click', function (e) {
+			let target = e.target
+			console.log(11111111111)
+			if (target.className.indexOf('btn_login') !== -1) {
+				_czc.push(['_trackEvent', 'login', '登录账号'])
+			}
+			if (target.className.indexOf('logout') !== -1) {
+				_czc.push(['_trackEvent', 'logout', '退出账号'])
+			}
+			if (target.className.indexOf('select_zh') !== -1) {
+				_czc.push(['_trackEvent', 'language_selection_Chinese', '选择中文'])
+			}
+			if (target.className.indexOf('select_en') !== -1) {
+				_czc.push(['_trackEvent', 'language_selection_English', '选择英文'])
+			}
+			if (target.className.indexOf('search__btn') !== -1) {
+				_czc.push(['_trackEvent', 'search', '使用搜索'])
+			}
+			if (target.className.indexOf('classify') !== -1) {
+				let classify_name = target.innerHTML
+				console.log(classify_name)
+				_czc.push(['_trackEvent', '点击分类' + classify_name, classify_name])
+			}
+			if (target.className.indexOf('sortType_btn') !== -1) {
+				let sort_name = target.innerHTML
+				console.log(sort_name)
+				_czc.push(['_trackEvent', '点击排序' + sort_name, sort_name])
+			}
+			// if (target.className.indexOf('order_all') !== -1) {
+			//   console.log(11111111)
+			//   _czc.push(['_trackEvent', 'click_settings', '我的订单'])
+			// }
+			if (target.className.indexOf('user_account') !== -1) {
+				console.log('2222个人中心')
+				_czc.push(['_trackEvent', 'click_my', '个人中心'])
+			}
+			// if (target.className.indexOf('user_address') !== -1) {
+			//   console.log(11111111)
+			//   _czc.push(['_trackEvent', 'click_my', '我的地址'])
+			// }
+		})
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,128 @@
+/* 改变主题色变量 */
+$--color-primary: #FF644C;
+// .mobileNum .el-input__inner {
+//     width: 60%;
+//     display: inline-block;
+// }
+// .mobileNum .el-button {
+//     position: absolute;
+//     top: -1px;
+//     right: 0;
+// }
+.phone-message {
+  .el-select .el-input__inner {
+    min-width: 390px;
+  }
+  .new_phone {
+    width: 60%;
+  }
+}
+.verify-img {
+    height: 40px;
+  .el-input__inner {
+    width: 60%;
+  }
+  .code-img {
+    height: 40px;
+    top: -40px;
+    left: 360px;
+    img {
+      width: 90px;
+    } 
+  }
+}
+.detail-dialog {
+  .el-dialog__body {
+    margin: 0 50px;
+    padding: 0
+  }
+  .el-radio__input.is-checked + .el-radio__label {
+    color: #606266;
+  }
+}
+.el-dialog__headerbtn {
+  z-index: 9999;
+}
+.wechat-pay {
+  .el-dialog__footer {
+    margin-top: -15px;
+  }
+}
+.mes_btn:hover{
+  color: #666666;
+  border: 1px solid #999999;
+  background-color: #dddddd;
+}
+.el-input--small .el-input__inner {
+  width: 120px;
+}
+.deleteComment {
+  text-align: center;
+} 
+.table .el-table thead{
+  color: #333333;
+  font-size: 15px
+}
+.table .el-table th {
+  background-color: #FAFAFA;
+}
+.table .el-button--text {
+  color: #666666;
+}
+.table .el-table .cell {
+  padding-left: 25px;
+}
+.table .el-pagination {
+  text-align: center;
+  padding: 23px;
+}
+.table .el-pager li.active {
+  background: #FF644D;
+  color: #ffffff;
+  border-radius: 4px;
+}
+.table .el-pager li {
+  color: #606266;
+  font-size: 12px;
+}
+.table .el-button--text:hover, .el-button--text:focus {
+  color: #666666;
+}
+.table .el-table__body tr.current-row > td {
+  background: #ffffff;
+}
+.table .el-button--text span {
+  color: #666666;
+}
+.table .el-pager li {
+  min-width: 28px;
+}
+.table .el-table td {
+  padding: 5px 0;
+}
+.table .el-table td:first-child {
+  margin-left: 25px;
+}
+.upload__img__wrapper .el-upload--picture-card {
+  width: 84px;
+  height: 84px;
+  margin: 10px;
+}
+.upload__img__wrapper .el-upload--picture-card i {
+  position: absolute;
+  top: 33%;
+  left: 35%;
+}
+.upload__img__wrapper .el-upload-list--picture-card .el-upload-list__item{
+  width: 84px;
+  height: 84px;
+  margin: 10px;
+}
+.upload__img__wrapper .el-upload-list--picture-card .el-upload-list__item img{
+  width: 84px;
+  height: 84px;
+}
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=utf-8>
+  <meta name=viewport content="width=device-width,initial-scale=1">
+  <link rel=icon href=./static/favicon.ico>
+  <link rel=stylesheet href=//at.alicdn.com/t/font_532361_9sta7yuioyshsemi.css>
+  <link rel=stylesheet href=./static/plungins/photoSwipe/photoswipe.css>
+  <link rel=stylesheet href=./static/plungins/photoSwipe/default-skin/default-skin.css>
+  <title></title>
+  <link href=/loong/static/css/app.78f828650b445d356683ec8faa3236e0.css rel=stylesheet>
+</head>
+
+<body>
+  <div id=app></div>
+  <script type=text/javascript src=./static/plungins/qiniu.min.js></script>
+  <script type=text/javascript src=./static/plungins/plupload.full.min.js></script>
+  <script type=text/javascript src=./static/plungins/photoSwipe/photoswipe.min.js></script>
+  <script type=text/javascript src=./static/plungins/photoSwipe/photoswipe-ui-default.min.js></script>
+  <script type=text/javascript src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvAsx_SoeYJ5kIUBDaMpyj92B8bvGt4Zw&libraries=places"></script>
+  <script>
+    let lang = getCookie('lang');
+    if (lang == 'zh') {
+      document.querySelector("title").innerHTML = "龙外卖";
+    } else if (lang == 'en') {
+      document.querySelector("title").innerHTML = "Loong Delivery";
+    }
+    console.log(getCookie('lang'), document.querySelector("title").innerHTML);
+
+    function getCookie(name) {
+      var arr1 = document.cookie.split("; ");
+      for (var i = 0; i < arr1.length; i++) {
+        var arr2 = arr1[i].split("=");
+        if (arr2[0] == name) {
+          return arr2[1];
+        }
+      }
+      return "";
+    }
+
+  </script>
+  <script type=text/javascript src=/loong/static/js/manifest.3fdd248b42c5f908d30f.js></script>
+  <script type=text/javascript src=/loong/static/js/vendor.9cda1d77cb29915dba62.js></script>
+  <script type=text/javascript src=/loong/static/js/app.052d2dcea1db4acc8e1e.js></script>
+</body>
+
+</html>
